@@ -13,7 +13,12 @@ func main() {
 	} else {
 		characters = os.Args[1]
 	}
+	for i := 0; len(characters) < 8; i++ {
+		char := characters[i]
+		characters = characters + string(char)
+	}
+
 	for i := 0; i < 8; i++ {
-		fmt.Printf("%c", characters[0])
+		fmt.Printf("%c", characters[i])
 	}
 }
