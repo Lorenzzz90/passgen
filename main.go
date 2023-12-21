@@ -11,6 +11,7 @@ func main() {
 		// FIXME: if you give a wrong number of arguments, it continues and reports a panic
 		// immediately stop the program as soon as you hit a blocker for your program.
 		fmt.Println("You should provide zero or one command line arguments.")
+		os.Exit(1)
 	} else if len(os.Args) == 1 {
 		characters = "abcdefgh"
 	} else {
@@ -22,6 +23,7 @@ func main() {
 	}
 
 	// FIXME: print a better message. Not only a password. You have to write meaningful UI (the user should not guess what you're doing!)
+	fmt.Print("Password: ")
 	for i := 0; i < 8; i++ {
 		fmt.Printf("%c", characters[i])
 	}
